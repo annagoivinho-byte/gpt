@@ -2,16 +2,16 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Anna Júlia × Nubank — Meu sonho atravessou fronteiras</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Meu sonho atravessou fronteiras | Anna Goivinho</title>
 
 <style>
 :root {
   --roxo: #820ad1;
   --escuro: #210735;
-  --lilas: #f2eafa;
-  --lima: #eef0b7;
-  --cinza: #716779;
+  --lavanda: #f2eaf8;
+  --cinza: #73667c;
+  --claro: #d8b0f6;
 }
 
 * { box-sizing: border-box; }
@@ -25,7 +25,6 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   color: var(--escuro);
-  background: white;
 }
 
 a { color: inherit; text-decoration: none; }
@@ -33,500 +32,399 @@ button { font: inherit; cursor: pointer; }
 p { line-height: 1.7; }
 
 header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
   height: 80px;
   padding: 0 6%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
   border-bottom: 1px solid #eee;
 }
 
 .logo {
-  font-size: 28px;
-  font-weight: bold;
+  font-size: 26px;
   letter-spacing: -1.5px;
+  font-weight: 700;
 }
 
-.logo span { font-weight: normal; }
+.logo span { font-weight: 400; }
 
 nav {
   display: flex;
+  gap: 25px;
   align-items: center;
-  gap: 28px;
-  font-size: 13px;
+  font-size: 12px;
 }
 
-nav a:hover { color: var(--roxo); }
-
-.nav-button {
-  border: 1px solid #dbc7e9;
-  border-radius: 30px;
+.pill {
+  border: 1px solid #d9c6e5;
   padding: 13px 20px;
+  border-radius: 30px;
 }
 
 .hero {
-  min-height: 760px;
   position: relative;
-  display: flex;
-  align-items: center;
+  min-height: 760px;
+  background:
+    linear-gradient(90deg, #1c0828ed, #1c082844),
+    url("https://images.unsplash.com/photo-1517935706615-2717063c2225?auto=format&fit=crop&w=2000&q=85")
+    center / cover,
+    #2d123d;
   color: white;
-  background-color: #261037;
-  background-image:
-    linear-gradient(90deg, rgba(21, 6, 32, .88), rgba(21, 6, 32, .2)),
-    url("https://images.unsplash.com/photo-1517935706615-2717063c2225?auto=format&fit=crop&w=2200&q=85");
-  background-size: cover;
-  background-position: center;
+  padding: 85px 8% 160px;
 }
 
-.hero-content {
-  width: 100%;
-  padding: 75px 8% 130px;
-}
-
-.eyebrow {
+.label {
   font-size: 10px;
-  font-weight: bold;
-  letter-spacing: 2px;
+  letter-spacing: 1.8px;
+  font-weight: 700;
   text-transform: uppercase;
+  color: var(--cinza);
+  line-height: 1.7;
+  margin: 0 0 30px;
 }
 
-.hero .eyebrow { color: #e8cef9; }
+.hero .label,
+.contact .label,
+.night .label {
+  color: var(--claro);
+}
 
 h1 {
-  font-size: clamp(65px, 8.5vw, 126px);
-  font-weight: normal;
-  letter-spacing: -6px;
+  font-size: clamp(64px, 8vw, 118px);
+  letter-spacing: -5px;
+  font-weight: 400;
   line-height: .98;
   margin: 35px 0 25px;
 }
 
-h1 span { color: #d6aff2; }
-
-.hero-description {
-  font-size: 20px;
-  line-height: 1.5;
+h1 em,
+h2 em {
+  font-style: normal;
+  color: var(--claro);
 }
+
+.hero > p:not(.label) { font-size: 20px; }
 
 .button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 35px;
-  padding: 18px 24px;
-  margin-top: 15px;
-  border: 0;
-  border-radius: 35px;
+  display: inline-block;
   background: white;
   color: var(--escuro);
+  border: 0;
+  padding: 17px 24px;
+  border-radius: 30px;
   font-size: 13px;
-  font-weight: bold;
-  transition: transform .2s;
+  font-weight: 700;
+  margin-top: 15px;
 }
-
-.button:hover { transform: translateY(-3px); }
 
 .destination {
   position: absolute;
   right: 8%;
-  bottom: 100px;
+  bottom: 95px;
+  background: #ffffff15;
+  border: 1px solid #ffffff50;
+  backdrop-filter: blur(15px);
+  border-radius: 16px;
+  padding: 24px;
   display: grid;
   gap: 12px;
-  padding: 24px;
-  border: 1px solid #ffffff55;
-  border-radius: 16px;
-  background: #ffffff15;
-  backdrop-filter: blur(15px);
 }
 
 .destination small {
-  font-size: 9px;
-  letter-spacing: 1.5px;
+  font-size: 8px;
+  letter-spacing: 1.2px;
 }
 
 .destination strong {
   font-size: 26px;
-  font-weight: normal;
-  letter-spacing: -.8px;
+  font-weight: 400;
 }
 
 .hero-bottom {
   position: absolute;
-  bottom: 0;
   left: 8%;
   right: 8%;
-  padding: 23px 0;
-  border-top: 1px solid #ffffff44;
-  display: flex;
-  justify-content: space-between;
-  font-size: 9px;
-  letter-spacing: 1.5px;
+  bottom: 0;
+  padding: 22px 0;
+  border-top: 1px solid #ffffff40;
+  font-size: 8px;
+  letter-spacing: 1px;
 }
 
-.ribbon {
-  padding: 27px 5%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 20px;
-  overflow: hidden;
-  background: var(--lima);
-  color: var(--roxo);
-  font-size: clamp(25px, 4vw, 58px);
-  font-weight: bold;
-  letter-spacing: -2px;
-  white-space: nowrap;
+.manifesto {
+  padding: 65px 8%;
+  background: var(--roxo);
+  color: white;
 }
 
-.ribbon i {
-  font-style: normal;
-  font-size: 35px;
+.manifesto h2 {
+  font-size: clamp(27px, 3.5vw, 48px);
+  line-height: 1.2;
+  letter-spacing: -1.5px;
 }
 
-section.content { padding: 100px 8%; }
+.manifesto span { color: var(--claro); }
 
-.label {
-  font-size: 10px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  color: #796586;
-  margin: 0 0 35px;
-}
+section.content { padding: 90px 8%; }
 
 h2 {
-  font-size: clamp(40px, 4.7vw, 68px);
-  font-weight: normal;
-  letter-spacing: -3px;
-  line-height: 1.06;
+  font-size: clamp(39px, 4.5vw, 65px);
+  font-weight: 400;
+  letter-spacing: -2.8px;
+  line-height: 1.07;
   margin: 0;
 }
 
 h2 span { color: var(--roxo); }
 
-.two-columns {
+.grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 9%;
+  align-items: center;
 }
 
-.story-copy p {
+.copy p {
   font-size: 15px;
   color: var(--cinza);
-  margin: 0 0 22px;
 }
 
-.story-copy .intro {
+.copy .intro {
+  font-size: 21px;
   color: var(--escuro);
-  font-size: 23px;
   line-height: 1.4;
-  letter-spacing: -.6px;
+  margin-top: 30px;
 }
 
 .signature {
-  margin-top: 32px;
-  font-family: Georgia, serif;
-  font-style: italic;
-  font-size: 30px;
+  font: italic 28px Georgia, serif;
+  margin-top: 30px;
 }
 
 .signature small {
   display: block;
   margin-top: 12px;
-  font-family: Arial, sans-serif;
-  font-size: 9px;
-  font-style: normal;
-  letter-spacing: 1.5px;
+  font: 8px Arial, sans-serif;
+  letter-spacing: 1px;
+  line-height: 1.7;
 }
 
-.planning { background: #f8f5fa; }
-.planning .two-columns { align-items: center; }
+figure { margin: 0; }
 
-.planning h2 { margin-bottom: 25px; }
-
-.body-copy {
-  max-width: 460px;
-  font-size: 15px;
-  color: var(--cinza);
-}
-
-.product-note {
-  border-top: 1px solid #dfd4e7;
-  margin-top: 28px;
-  padding-top: 24px;
-}
-
-.product-note h3 {
-  font-size: 17px;
-  margin-bottom: 8px;
-}
-
-.product-note p {
-  font-size: 13px;
-  color: var(--cinza);
-}
-
-.dream-visual {
+.portrait {
+  aspect-ratio: 724 / 1086;
+  background: linear-gradient(145deg, #f1e5fa, #b996d0);
   position: relative;
-  min-height: 480px;
-  display: grid;
-  place-items: center;
   overflow: hidden;
-  background:
-    radial-gradient(ellipse at 50% 75%, #b26be9, #750bb3 60%, #43086b);
-  color: white;
 }
 
-.visual-label {
+.portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.portrait img[hidden] { display: none; }
+
+.placeholder {
   position: absolute;
-  top: 28px;
-  font-size: 9px;
-  letter-spacing: 1.5px;
-  text-align: center;
-}
-
-.orbit {
-  position: absolute;
-  width: 600px;
-  height: 270px;
-  border: 1px solid #ffffff33;
-  border-radius: 50%;
-  transform: rotate(-45deg);
-}
-
-.orbit.second { transform: rotate(45deg); }
-
-.dream-card {
-  position: relative;
-  z-index: 1;
-  width: 75%;
-  max-width: 330px;
-  padding: 28px;
-  border: 1px solid #ffffff66;
-  border-radius: 22px;
-  background: linear-gradient(135deg, #ffffff35, #ffffff08);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 30px 65px #32014b55;
-  transform: rotate(-8deg);
-}
-
-.card-label {
+  inset: 0;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 9px;
-  letter-spacing: 1px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 35px;
 }
 
-.card-label b { font-size: 30px; }
+.placeholder[hidden] { display: none; }
 
-.card-arrow {
-  font-size: 75px;
-  line-height: 1;
-  margin: 20px 0;
+.placeholder > span {
+  font-size: 10px;
+  letter-spacing: 2px;
 }
 
-.dream-card h3 {
-  font-size: 31px;
-  font-weight: normal;
-  line-height: 1.12;
-  letter-spacing: -1px;
+.placeholder p {
+  font-size: 38px;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
 }
 
-.card-route {
-  border-top: 1px solid #ffffff44;
+.choose {
+  cursor: pointer;
+  border-top: 1px solid #b59ac8;
   padding-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  font-size: 9px;
+  font-size: 13px;
+}
+
+figcaption {
+  font-size: 8px;
   letter-spacing: 1px;
+  margin-top: 15px;
+  line-height: 1.7;
 }
 
-.christmas {
-  min-height: 650px;
-  display: flex;
-  align-items: center;
-  padding: 90px 8%;
-  color: white;
-  background-color: #28122e;
-  background-image:
-    linear-gradient(90deg, #1e0928ed, #1e092855),
-    url("https://images.unsplash.com/photo-1482517967863-00e15c9b44be?auto=format&fit=crop&w=2200&q=85");
-  background-size: cover;
-  background-position: center;
-}
-
-.christmas .label { color: #dfc7ee; }
-
-.christmas h2 {
-  max-width: 800px;
-  margin-bottom: 28px;
-}
-
-.christmas h2 span { color: #d5aff0; }
-
-.christmas p {
-  max-width: 460px;
-  font-size: 16px;
-  color: #f2e6f8;
-}
-
-.location {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 13px 18px;
-  border: 1px solid #ffffff55;
-  border-radius: 30px;
-  font-size: 9px;
-  letter-spacing: 1.5px;
-}
-
-.chapter-heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 50px;
-}
-
-.chapter-heading p {
-  max-width: 360px;
+.photo-tools {
+  margin-top: 18px;
+  font-size: 12px;
   color: var(--cinza);
-  font-size: 14px;
 }
 
-.tabs {
-  display: flex;
-  max-width: 780px;
-  padding: 5px;
-  margin: 40px 0 35px;
-  border: 1px solid #ded1e7;
-  border-radius: 40px;
+.photo-tools label {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
-.tabs button {
-  flex: 1;
-  padding: 16px 12px;
+.photo-tools input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.photo-tools button {
+  background: var(--escuro);
+  color: white;
   border: 0;
-  border-radius: 30px;
-  background: transparent;
-  color: var(--escuro);
+  padding: 13px 18px;
+  border-radius: 25px;
+  display: block;
+  margin-top: 15px;
   font-size: 12px;
 }
 
-.tabs button[aria-selected="true"] {
+.photo-tools button[hidden] { display: none; }
+.photo-tools p { font-size: 11px; }
+
+.journey { background: #f8f5fa; }
+
+.journey h2 {
+  font-size: clamp(35px, 3.8vw, 54px);
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin-top: 50px;
+}
+
+.steps a {
+  border-top: 1px solid #cebedb;
+  padding-top: 18px;
+}
+
+.steps small {
+  font-size: 9px;
+  color: var(--roxo);
+  letter-spacing: 1px;
+}
+
+.steps h3 {
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: -1px;
+  margin: 25px 0 8px;
+}
+
+.steps p {
+  font-size: 13px;
+  margin: 0 0 20px;
+}
+
+.steps .status {
+  font-size: 8px;
+  color: var(--cinza);
+}
+
+.quote {
+  font-size: 28px !important;
+  line-height: 1.3;
+  letter-spacing: -.7px;
+  color: var(--escuro) !important;
+  margin-top: 0;
+}
+
+.night {
   background: var(--escuro);
   color: white;
 }
 
-.chapter-panel {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8%;
-  align-items: center;
-}
+.night h2 span { color: var(--claro); }
+.night .copy p { color: #ddcee6; }
+.night .quote { color: white !important; }
+.night .quote span { color: var(--claro); }
 
-.chapter-art {
-  min-height: 390px;
-  padding: 35px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background: var(--lilas);
-  color: var(--roxo);
-}
-
-.chapter-number {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 9px;
-  letter-spacing: 2px;
-}
-
-.chapter-number strong {
-  font-size: 55px;
-  font-weight: normal;
-  letter-spacing: -3px;
-}
-
-.art-title {
-  font-size: clamp(36px, 4vw, 58px);
-  line-height: 1.05;
-  letter-spacing: -2px;
-}
-
-.art-footer {
-  font-size: 9px;
-  letter-spacing: 1.5px;
-}
-
-.tag {
+.status-label {
   display: inline-block;
-  padding: 9px 12px;
-  border-radius: 25px;
-  background: var(--lilas);
   font-size: 9px;
   letter-spacing: 1px;
+  border-bottom: 1px solid #9e7cb4;
+  padding-bottom: 12px;
+  margin-bottom: 25px;
+  color: var(--claro);
 }
 
-.chapter-detail h3 {
-  margin: 24px 0 16px;
-  font-size: 32px;
-  font-weight: normal;
-  line-height: 1.15;
-  letter-spacing: -1px;
+.lavender { background: var(--lavanda); }
+
+.note {
+  font-size: 11px !important;
+  border-top: 1px solid #d0bedc;
+  padding-top: 18px;
+  margin-top: 25px;
 }
 
-.chapter-detail p {
-  font-size: 14px;
-  color: var(--cinza);
+.toronto {
+  padding: 85px 8%;
+  background:
+    linear-gradient(90deg, #1c0828f2, #1c082866),
+    url("https://images.unsplash.com/photo-1482517967863-00e15c9b44be?auto=format&fit=crop&w=2000&q=85")
+    center / cover,
+    #2d123d;
+  color: white;
 }
 
-blockquote {
-  margin: 25px 0;
-  padding-left: 18px;
-  border-left: 2px solid var(--roxo);
-  font-size: 15px;
-  line-height: 1.6;
+.toronto .label { color: var(--claro); }
+
+.toronto h2 {
+  font-size: clamp(65px, 7vw, 100px);
+  margin-bottom: 30px;
 }
 
-.format {
-  display: grid;
-  gap: 10px;
-  padding-top: 20px;
-  border-top: 1px solid #e7deed;
+.toronto p:not(.label) {
+  max-width: 500px;
+  font-size: 16px;
+  color: #efe4f5;
 }
 
-.format small {
-  font-size: 9px;
-  letter-spacing: 1px;
-  color: var(--cinza);
+.toronto .quote {
+  color: white !important;
+  font-size: 25px !important;
 }
 
-.format strong {
-  font-size: 12px;
-  font-weight: normal;
+.toronto .caption {
+  font-size: 9px !important;
+  margin-top: 30px;
 }
 
-.caption {
-  margin-top: 24px;
-  font-size: 11px;
-  color: var(--cinza);
-}
+.strategy { background: #eef0b7; }
 
-.why { background: var(--lima); }
+.strategy h2 {
+  font-size: clamp(35px, 4vw, 56px);
+}
 
 .reasons {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  margin-top: 55px;
+  gap: 35px;
+  margin-top: 50px;
 }
 
 .reasons article {
-  border-top: 1px solid #c9cc98;
+  border-top: 1px solid #c5c895;
   padding-top: 20px;
 }
 
@@ -537,243 +435,358 @@ blockquote {
 
 .reasons h3 {
   font-size: 20px;
-  font-weight: normal;
-  letter-spacing: -.6px;
+  font-weight: 400;
+  letter-spacing: -.5px;
+  margin-top: 25px;
 }
 
 .reasons p {
-  font-size: 14px;
-  color: #635f4c;
+  font-size: 13px;
+  color: #625f4d;
 }
 
-.partnership {
+.concept-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 35px;
+}
+
+.concept-heading p {
+  font-size: 13px;
+  color: var(--cinza);
+  max-width: 340px;
+}
+
+.tabs {
+  display: flex;
+  padding: 5px;
+  border: 1px solid #dacbe4;
+  border-radius: 35px;
+  margin: 40px 0 35px;
+  max-width: 850px;
+}
+
+.tabs button {
+  flex: 1;
+  border: 0;
+  border-radius: 30px;
+  background: transparent;
+  color: var(--escuro);
+  padding: 15px 8px;
+  font-size: 11px;
+}
+
+.tabs button[aria-selected="true"] {
+  background: var(--escuro);
+  color: white;
+}
+
+.art {
+  padding: 32px;
+  min-height: 380px;
+  background: var(--lavanda);
+  color: var(--roxo);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.art-number {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.art-number b {
+  font-size: 52px;
+  font-weight: 400;
+  letter-spacing: -2px;
+}
+
+.art-title {
+  font-size: clamp(35px, 3.8vw, 54px);
+  line-height: 1.1;
+  letter-spacing: -2px;
+}
+
+.art small {
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+
+.tag {
+  display: inline-block;
+  border-radius: 20px;
+  padding: 10px 13px;
+  background: var(--lavanda);
+  font-size: 8px;
+  letter-spacing: .8px;
+}
+
+.detail h3 {
+  font-size: 29px;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  font-weight: 400;
+  margin: 25px 0 15px;
+}
+
+.detail p {
+  font-size: 14px;
+  color: var(--cinza);
+}
+
+blockquote {
+  border-left: 2px solid var(--roxo);
+  padding-left: 17px;
+  margin: 25px 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.format {
+  font-size: 11px;
+  border-top: 1px solid #e3d9e9;
+  padding-top: 18px;
+  line-height: 1.7;
+}
+
+.caption {
+  font-size: 10px;
+  color: var(--cinza);
+  margin-top: 25px;
+}
+
+.commercial { background: #f8f5fa; }
+
+.commercial h2 {
+  font-size: clamp(35px, 4vw, 55px);
+}
+
+.commercial .intro {
+  font-size: 21px;
+  line-height: 1.4;
+  color: var(--escuro);
+}
+
+.scope > div {
+  border-top: 1px solid #d7c8e1;
+  padding: 18px 0;
+}
+
+.scope h3 {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0 0 10px;
+}
+
+.scope p {
+  font-size: 13px;
+  color: var(--cinza);
+  margin: 0;
+}
+
+.contact {
   background: var(--roxo);
   color: white;
 }
 
-.partnership .two-columns { align-items: center; }
-
-.partnership .label { color: #e4c0ff; }
-
-.partnership h2 {
-  font-size: clamp(55px, 6vw, 90px);
+.contact h2 {
+  font-size: clamp(48px, 5.5vw, 80px);
 }
 
-.partnership h2 span { color: #d9aff7; }
-
-.partnership p { font-size: 17px; }
-
-.offer {
-  padding: 35px;
-  border: 1px solid #ffffff55;
-  border-radius: 22px;
-  background: #ffffff0d;
+.contact .name {
+  font-size: 23px;
+  margin-top: 30px;
 }
 
-.offer-label {
-  font-size: 10px;
-  letter-spacing: 2px;
-  color: #ebd1fc;
+.contact .name span {
+  font-size: 13px;
+  color: #e5c8fa;
 }
 
-.offer h3 {
-  font-size: 33px;
-  font-weight: normal;
-  line-height: 1.15;
-  letter-spacing: -1px;
-}
+address { font-style: normal; }
 
-.offer ul {
-  padding: 0;
-  list-style: none;
-}
-
-.offer li {
-  padding: 15px 0;
-  border-bottom: 1px solid #ffffff33;
-  font-size: 14px;
-}
-
-.offer li::before {
-  content: "+";
-  margin-right: 15px;
-  color: #deb1fb;
-}
-
-.offer .terms {
-  font-size: 12px;
-  color: #eedcf9;
-}
-
-.offer .name {
-  margin-top: 25px;
-  font-size: 25px;
-}
-
-.offer .name small {
+address a {
   display: block;
-  margin-top: 10px;
-  font-size: 9px;
-  letter-spacing: 1.5px;
+  border-bottom: 1px solid #ffffff40;
+  padding: 20px 0;
 }
+
+address small {
+  font-size: 8px;
+  letter-spacing: 1.5px;
+  color: #e4befd;
+  display: block;
+  margin-bottom: 10px;
+}
+
+address strong {
+  font-size: clamp(17px, 1.8vw, 25px);
+  font-weight: 400;
+  letter-spacing: -.5px;
+  overflow-wrap: anywhere;
+}
+
+address a:hover strong { text-decoration: underline; }
 
 footer {
-  padding: 35px 6%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
+  padding: 30px 6%;
+  background: #1b062a;
   color: white;
-  background: #1b062b;
+  display: flex;
+  gap: 25px;
+  align-items: center;
 }
 
 footer p {
-  font-size: 11px;
-  color: #c5b4cf;
+  font-size: 9px;
+  line-height: 1.8;
+  color: #cbb9d6;
+  margin-left: auto;
 }
 
 footer button {
-  background: transparent;
-  border: 1px solid #725584;
+  border: 1px solid #725483;
   border-radius: 25px;
-  padding: 13px 18px;
-  color: white;
-  font-size: 12px;
-}
-
-dialog {
-  width: calc(100% - 35px);
-  max-width: 550px;
-  border: 0;
-  border-radius: 22px;
-  padding: 40px;
-  color: var(--escuro);
-}
-
-dialog::backdrop {
-  background: #210735aa;
-  backdrop-filter: blur(5px);
-}
-
-dialog h2 {
-  font-size: 40px;
-  margin-bottom: 22px;
-}
-
-dialog p { font-size: 14px; }
-
-.close {
-  position: absolute;
-  top: 12px;
-  right: 18px;
-  border: 0;
+  padding: 12px 16px;
   background: transparent;
-  font-size: 30px;
+  color: white;
+  font-size: 10px;
 }
 
-.pending {
-  padding: 16px;
-  background: var(--lilas);
-  border-radius: 10px;
-}
+.print-concepts { display: none; }
 
 :focus-visible {
-  outline: 3px solid #c17cee;
+  outline: 3px solid #ba77e8;
   outline-offset: 5px;
 }
 
-@media (max-width: 760px) {
-  header { height: 70px; }
-  .logo { font-size: 25px; }
-  nav a:not(.nav-button) { display: none; }
-  .nav-button { padding: 12px 15px; font-size: 11px; }
+@media (max-width: 800px) {
+  header { height: 72px; }
+  .logo { font-size: 23px; }
+  nav > a:not(.pill) { display: none; }
+  .pill { font-size: 10px; padding: 12px 15px; }
 
-  .hero { min-height: 850px; }
-  .hero-content { padding: 65px 7% 270px; }
-  h1 { font-size: 73px; letter-spacing: -4px; }
-  .hero-description { font-size: 17px; }
-  .eyebrow { font-size: 8px; }
+  .hero {
+    min-height: 800px;
+    padding: 60px 7% 250px;
+  }
+
+  h1 {
+    font-size: clamp(52px, 17vw, 75px);
+    letter-spacing: -3px;
+  }
+
+  .hero > p:not(.label) { font-size: 17px; }
+  .hero .label { font-size: 8px; }
 
   .destination {
     left: 7%;
     right: 7%;
     bottom: 90px;
+    padding: 20px;
   }
+
+  .destination strong { font-size: 24px; }
 
   .hero-bottom {
     left: 7%;
     right: 7%;
     font-size: 7px;
-    letter-spacing: .6px;
+    line-height: 1.6;
   }
 
-  .ribbon {
-    justify-content: flex-start;
-    font-size: 31px;
+  .manifesto { padding: 50px 7%; }
+
+  .manifesto h2 {
+    font-size: 29px;
     letter-spacing: -1px;
   }
 
   section.content { padding: 65px 7%; }
-  h2 { font-size: 44px; letter-spacing: -2px; }
 
-  .two-columns,
-  .chapter-panel,
-  .reasons {
+  .grid {
     grid-template-columns: 1fr;
     gap: 35px;
   }
 
-  .dream-visual { min-height: 450px; }
+  h2 { font-size: 43px; letter-spacing: -2px; }
 
-  .christmas {
-    padding: 70px 7%;
-    min-height: 650px;
+  .steps {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px 20px;
   }
 
-  .christmas h2 { font-size: 43px; }
+  .steps h3 { font-size: 24px; }
+  .steps .status { font-size: 7px; }
+  .journey h2 { font-size: 35px; }
+  .toronto { padding: 65px 7%; }
+  .toronto h2 { font-size: clamp(54px, 15vw, 80px); }
+  .strategy h2 { font-size: 36px; }
 
-  .chapter-heading { display: block; }
-  .chapter-heading p { margin-top: 25px; }
-
-  .tabs {
-    border-radius: 18px;
-    gap: 3px;
+  .reasons {
+    grid-template-columns: 1fr;
+    gap: 25px;
   }
+
+  .concept-heading { display: block; }
+  .concept-heading p { margin-top: 25px; }
+  .tabs { border-radius: 15px; gap: 2px; }
 
   .tabs button {
-    padding: 12px 6px;
-    font-size: 10px;
+    font-size: 9px;
+    padding: 12px 4px;
+    border-radius: 10px;
     line-height: 1.6;
-    border-radius: 12px;
   }
 
   .tabs button span { display: block; }
-  .chapter-art { min-height: 350px; }
-  .art-title { font-size: 48px; }
+  .art { min-height: 340px; }
+  .art-title { font-size: 45px; }
+  .commercial h2 { font-size: 38px; }
+  .contact h2 { font-size: 53px; }
+  address strong { font-size: 21px; }
 
-  .why h2 { font-size: 37px; }
-  .partnership h2 { font-size: 65px; }
-  .offer { padding: 28px; }
-
-  footer { flex-wrap: wrap; }
-  footer p { width: 100%; order: 3; }
-  dialog { padding: 35px 25px; }
+  footer { flex-wrap: wrap; gap: 20px; }
+  footer p { order: 3; width: 100%; margin: 0; }
+  footer button { margin-left: auto; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .button { transition: none; }
 }
 
 @media print {
   header { position: static; }
-  nav, .button, footer button, .tabs { display: none; }
+
+  nav,
+  .photo-tools,
+  .choose,
+  .tabs,
+  footer button {
+    display: none;
+  }
+
+  .interactive-panel { display: none; }
+  .print-concepts { display: block; }
+
+  .print-concepts article {
+    border-top: 1px solid #d7c8e1;
+    padding: 20px 0;
+    break-inside: avoid;
+  }
+
+  .print-concepts h3 { font-size: 24px; }
+  .print-concepts p { font-size: 14px; }
+  .print-concepts small { font-size: 10px; }
+
+  .hero { min-height: 640px; }
   section.content { padding: 45px 6%; }
-  .hero { min-height: 650px; }
-  .hero-content { padding-top: 40px; }
-  .hero h1 { font-size: 85px; }
-  .hero .destination { bottom: 85px; }
-  .chapter-panel, .offer, .reasons article { break-inside: avoid; }
+  .grid { break-inside: avoid; }
 
   body {
     print-color-adjust: exact;
@@ -786,283 +799,306 @@ dialog p { font-size: 14px; }
 <body>
 
 <header>
-  <a class="logo" href="#inicio">anna<span>júlia.</span></a>
+  <a class="logo" href="#inicio">anna<span>goivinho.</span></a>
 
   <nav aria-label="Menu principal">
-    <a href="#historia">A história</a>
+    <a href="#historia">Nossa história</a>
+    <a href="#jornada">A jornada</a>
     <a href="#proposta">A proposta</a>
-    <a class="nav-button" href="#parceria">Vamos conversar ↗</a>
+    <a class="pill" href="#contato">Vamos conversar ↗</a>
   </nav>
 </header>
 
 <main>
 
 <section class="hero" id="inicio">
-  <div class="hero-content">
-    <p class="eyebrow">Anna Júlia × Nubank · Proposta UGC</p>
+  <p class="label">ANNA GOIVINHO × NUBANK · PROPOSTA UGC</p>
 
-    <h1>
-      Meu sonho<br>
-      atravessou<br>
-      <span>fronteiras.</span>
-    </h1>
+  <h1>
+    Meu sonho<br>
+    atravessou<br>
+    <em>fronteiras.</em>
+  </h1>
 
-    <p class="hero-description">
-      Uma história sobre planejamento,<br>
-      conquistas e novos começos.
-    </p>
+  <p>
+    Uma história sobre planejamento,<br>
+    conquistas e novos começos.
+  </p>
 
-    <a class="button" href="#historia">
-      Conheça essa história <span>↓</span>
-    </a>
-  </div>
+  <a class="button" href="#historia">Conheça nossa história ↓</a>
 
   <div class="destination">
     <small>PRÓXIMO CAPÍTULO</small>
-    <strong>Toronto, Canadá ↗</strong>
-    <small>DEZEMBRO DE 2026 · INTERCÂMBIO DE INGLÊS</small>
+    <strong>Toronto, Canadá</strong>
+    <small>INTERCÂMBIO DE INGLÊS · DEZEMBRO 2026</small>
   </div>
 
   <div class="hero-bottom">
-    <span>UM SONHO ANTIGO. UMA HISTÓRIA REAL.</span>
-    <span>01 — O COMEÇO</span>
+    PROPOSTA INDEPENDENTE PARA O NUBANK · NÃO É CAMPANHA OFICIAL
   </div>
 </section>
 
-<div class="ribbon">
-  <span>Sonhar.</span><i>✳</i>
-  <span>Planejar.</span><i>✳</i>
-  <span>Viver.</span><i>✳</i>
-  <span>Com o Nu.</span>
-</div>
+<section class="manifesto">
+  <h2>
+    Do primeiro dinheiro guardado<br>
+    ao primeiro embarque internacional:<br>
+    <span>uma história real com o Nubank.</span>
+  </h2>
+</section>
 
 <section class="content" id="historia">
-  <p class="label">01 / DE ONDE EU VENHO</p>
+  <div class="grid">
 
-  <div class="two-columns">
-    <h2>
-      Alguns sonhos<br>
-      crescem<br>
-      <span>com a gente.</span>
-    </h2>
+    <div class="copy">
+      <p class="label">01 / UMA HISTÓRIA NOSSA</p>
 
-    <div class="story-copy">
+      <h2>
+        O sonho era meu.<br>
+        O plano passou<br>
+        <span>a ser nosso.</span>
+      </h2>
+
       <p class="intro">
-        O meu começou na adolescência.<br>
-        E tinha o mundo como destino.
+        Eu sou Anna Goivinho.<br>
+        E esse sonho começou na adolescência.
       </p>
 
       <p>
-        Eu queria aprender inglês, conhecer outro país e descobrir
-        como seria viver uma cultura completamente nova. Mas fazer
-        um intercâmbio parecia distante da minha realidade financeira.
+        Queria estudar inglês, conhecer outro país e viver uma cultura
+        completamente nova. Durante muito tempo, isso parecia distante
+        da minha realidade financeira.
       </p>
 
       <p>
-        Depois que conheci meu marido e nos casamos, começamos a
-        organizar nossa vida financeira e a planejar nossos objetivos
-        juntos. Aos poucos, o que era “um dia” começou a ganhar uma data.
+        Depois que me casei com José, o Zé, começamos a organizar nossas
+        finanças e planejar nossos objetivos juntos. Aos poucos, o que
+        era “um dia” ganhou uma data.
       </p>
 
       <div class="signature">
-        Anna Júlia
-        <small>CRIADORA UGC & CLIENTE NUBANK</small>
+        Anna Goivinho
+        <small>
+          CRIADORA UGC · PROFISSIONAL DE MARKETING · CLIENTE NUBANK
+        </small>
       </div>
     </div>
+
+    <figure>
+      <div class="portrait">
+        <img
+          id="couple-photo"
+          alt="Anna Goivinho e José, o Zé, juntos no Rock in Rio"
+          hidden
+        >
+
+        <div class="placeholder" id="photo-placeholder">
+          <span>ANNA + ZÉ</span>
+
+          <p>
+            Uma história<br>
+            vivida a dois.
+          </p>
+
+          <label class="choose" for="photo-input">
+            Escolher nossa foto +
+          </label>
+        </div>
+      </div>
+
+      <figcaption>
+        ANNA + ZÉ / O MUNDO É MELHOR QUANDO A GENTE VAI JUNTO.
+      </figcaption>
+
+      <div class="photo-tools">
+        <label for="photo-input">Escolher ou trocar foto</label>
+
+        <input
+          type="file"
+          id="photo-input"
+          accept="image/jpeg,image/png,image/webp"
+        >
+
+        <button type="button" id="save-photo" hidden>
+          Salvar HTML com nossa foto
+        </button>
+
+        <p id="photo-status" aria-live="polite"></p>
+      </div>
+    </figure>
+
   </div>
 </section>
 
-<section class="content planning">
-  <div class="two-columns">
+<section class="content journey" id="jornada">
+  <p class="label">02 / O NU EM CADA ETAPA</p>
+
+  <h2>
+    Não é só o destino.<br>
+    <span>É tudo o que nos trouxe até aqui.</span>
+  </h2>
+
+  <div class="steps">
+    <a href="#caixinhas">
+      <small>01</small>
+      <h3>Planejar.</h3>
+      <p>Caixinhas</p>
+      <small class="status">NA NOSSA ROTINA</small>
+    </a>
+
+    <a href="#viagens">
+      <small>02</small>
+      <h3>Concretizar.</h3>
+      <p>Nu Viagens</p>
+      <small class="status">PASSAGENS COMPRADAS</small>
+    </a>
+
+    <a href="#gru">
+      <small>03</small>
+      <h3>Embarcar.</h3>
+      <p>Sala VIP em GRU</p>
+      <small class="status">EXPERIÊNCIA PREVISTA</small>
+    </a>
+
+    <a href="#toronto">
+      <small>04</small>
+      <h3>Viver.</h3>
+      <p>Ultravioleta em Toronto</p>
+      <small class="status">USO PREVISTO NO EXTERIOR</small>
+    </a>
+  </div>
+</section>
+
+<section class="content" id="caixinhas">
+  <div class="grid">
     <div>
-      <p class="label">02 / DO PLANO À CONQUISTA</p>
+      <p class="label">CAPÍTULO 01 / CAIXINHAS</p>
 
       <h2>
-        Antes de fazer<br>
-        as malas,<br>
-        <span>fizemos planos.</span>
+        Um sonho que<br>
+        começou há<br>
+        <span>muitos anos.</span>
       </h2>
-
-      <p class="body-copy">
-        O Nubank já fazia parte da nossa rotina. Com organização e
-        constância, começamos a tirar nossos objetivos do papel.
-        O intercâmbio é um deles.
-      </p>
-
-      <div class="product-note">
-        <h3>Caixinhas na vida real</h3>
-        <p>
-          Já usamos as Caixinhas para guardar dinheiro e manter nossas
-          finanças organizadas. Uma relação que começou muito antes
-          desta proposta.
-        </p>
-      </div>
     </div>
 
-    <div class="dream-visual" aria-label="Ilustração de um plano de viagem">
-      <span class="visual-label">PEQUENOS PASSOS. NOVOS DESTINOS.</span>
+    <div class="copy">
+      <p class="quote">
+        Antes de fazer as malas,<br>
+        começamos a fazer planos.
+      </p>
 
-      <div class="orbit"></div>
-      <div class="orbit second"></div>
+      <p>
+        As Caixinhas já fazem parte da nossa rotina para guardar
+        dinheiro e organizar as finanças. Essa organização contribuiu
+        para conseguirmos planejar o intercâmbio.
+      </p>
 
-      <div class="dream-card">
-        <div class="card-label">
-          <b>✳</b>
-          <span>UM PLANO NOSSO</span>
-        </div>
-
-        <div class="card-arrow">↗</div>
-
-        <h3>
-          Próxima parada:<br>
-          um sonho antigo.
-        </h3>
-
-        <div class="card-route">
-          <span>BRASIL</span>
-          <span>······ ✈ ······</span>
-          <span>TORONTO</span>
-        </div>
-      </div>
+      <p>
+        Uma relação que começou antes desta proposta. Um uso cotidiano,
+        para nossos objetivos e nossa vida.
+      </p>
     </div>
   </div>
 </section>
 
-<section class="christmas">
-  <div>
-    <p class="label">03 / DEZEMBRO TEM UM SIGNIFICADO</p>
+<section class="content night" id="viagens">
+  <div class="grid">
+    <div>
+      <p class="label">CAPÍTULO 02 / NU VIAGENS</p>
 
-    <h2>
-      O Natal que eu<br>
-      via nos filmes.<br>
-      <span>Agora, na minha vida.</span>
-    </h2>
+      <h2>
+        A passagem<br>
+        <span>de um sonho.</span>
+      </h2>
+    </div>
 
-    <p>
-      Ruas iluminadas. Chocolate quente. Frio.<br>
-      E a possibilidade de ver neve pela primeira vez.
-    </p>
+    <div class="copy">
+      <span class="status-label">UM PASSO JÁ CONCRETIZADO</span>
 
-    <p>
-      Em dezembro de 2026, vamos para Toronto estudar inglês,
-      conhecer uma nova cultura e viver um sonho que guardei por anos.
-    </p>
+      <p class="quote">
+        As passagens para o Canadá<br>
+        já foram compradas.<br>
+        <span>Pelo Nu Viagens.</span>
+      </p>
 
-    <span class="location">
-      TORONTO, CANADÁ · DEZEMBRO 2026
-    </span>
+      <p>
+        É o momento em que a viagem deixa de ser só um plano.
+        A marca já faz parte dessa conquista, com uma experiência
+        real de compra.
+      </p>
+    </div>
   </div>
 </section>
 
-<section class="content" id="proposta">
-  <p class="label">04 / A PROPOSTA CRIATIVA</p>
+<section class="content lavender" id="gru">
+  <div class="grid">
+    <div>
+      <p class="label">CAPÍTULO 03 / EMBARQUE EM GRU</p>
 
-  <div class="chapter-heading">
-    <h2>
-      Uma história.<br>
-      <span>Três capítulos.</span>
-    </h2>
-
-    <p>
-      Conteúdo com começo, meio e uma conquista real.
-      Uma jornada que aproxima a marca da vida de quem já usa o Nu.
-    </p>
-  </div>
-
-  <div class="tabs" role="tablist" aria-label="Capítulos da proposta">
-    <button
-      id="tab-0"
-      type="button"
-      role="tab"
-      aria-controls="chapter-panel"
-      aria-selected="true"
-      tabindex="0"
-      data-index="0">
-      01 <span>Antes de embarcar</span>
-    </button>
-
-    <button
-      id="tab-1"
-      type="button"
-      role="tab"
-      aria-controls="chapter-panel"
-      aria-selected="false"
-      tabindex="-1"
-      data-index="1">
-      02 <span>O dia chegou</span>
-    </button>
-
-    <button
-      id="tab-2"
-      type="button"
-      role="tab"
-      aria-controls="chapter-panel"
-      aria-selected="false"
-      tabindex="-1"
-      data-index="2">
-      03 <span>Vivendo o sonho</span>
-    </button>
-  </div>
-
-  <div
-    class="chapter-panel"
-    id="chapter-panel"
-    role="tabpanel"
-    aria-labelledby="tab-0"
-    tabindex="0">
-
-    <div class="chapter-art" id="chapter-art">
-      <div class="chapter-number">
-        <span>CAPÍTULO</span>
-        <strong id="chapter-number">01</strong>
-      </div>
-
-      <div class="art-title" id="art-title">
-        Tudo começa<br>com um plano.
-      </div>
-
-      <span class="art-footer">ANNA JÚLIA × NUBANK</span>
+      <h2>
+        O sonho começa<br>
+        antes mesmo<br>
+        <span>de decolar.</span>
+      </h2>
     </div>
 
-    <div class="chapter-detail">
-      <span class="tag" id="chapter-tag">
-        PLANEJAMENTO & CONEXÃO
-      </span>
-
-      <h3 id="chapter-title">
-        O sonho já existia.<br>O plano veio depois.
-      </h3>
-
-      <p id="chapter-description">
-        Um vídeo sobre meu sonho de adolescente, nossa organização
-        financeira como casal e a presença das Caixinhas na nossa
-        rotina. O começo de uma conquista que vai além da viagem.
+    <div class="copy">
+      <p class="quote">
+        Guarulhos é o nosso<br>
+        ponto de partida.
       </p>
 
-      <blockquote id="chapter-hook">
-        “Antes de conhecer Toronto, eu precisei aprender a chegar até lá.”
-      </blockquote>
+      <p>
+        Pretendemos utilizar uma sala VIP por meio dos benefícios
+        do Nubank Ultravioleta. Uma oportunidade de contar a
+        expectativa e os pequenos rituais antes de embarcar.
+      </p>
 
-      <div class="format">
-        <small>FORMATO SUGERIDO</small>
-        <strong>Vídeo vertical UGC · 30–60 segundos</strong>
-      </div>
+      <p class="note">
+        Experiência futura: acesso específico, elegibilidade de
+        acompanhante e terminal ainda precisam ser confirmados.
+        A narrativa pode acompanhar o embarque mesmo sem acesso
+        à sala VIP.
+      </p>
     </div>
   </div>
+</section>
+
+<section class="toronto" id="toronto">
+  <p class="label">CAPÍTULO 04 / ULTRAVIOLETA NO EXTERIOR</p>
+
+  <h2>
+    Finalmente,<br>
+    <em>Toronto.</em>
+  </h2>
+
+  <p class="quote">
+    O Natal que eu via nos filmes.<br>
+    Agora, nos meus planos.
+  </p>
+
+  <p>
+    Inglês na rotina. Uma nova cultura. Ruas iluminadas, chocolate
+    quente e a possibilidade de ver neve pela primeira vez.
+  </p>
+
+  <p>
+    José já possui o Ultravioleta. Durante a estadia, pretendemos
+    registrar seu uso real em compras e experiências internacionais,
+    conforme os benefícios elegíveis.
+  </p>
 
   <p class="caption">
-    Conceitos iniciais, adaptáveis ao briefing. Uso dos benefícios do
-    Ultravioleta sujeito às condições e à elegibilidade aplicáveis.
+    VIAGEM PREVISTA PARA DEZEMBRO DE 2026 · FOTOGRAFIA DE ATMOSFERA,
+    NÃO É REGISTRO DA VIAGEM.
   </p>
 </section>
 
-<section class="content why">
-  <p class="label">05 / POR QUE ESSA HISTÓRIA?</p>
+<section class="content strategy">
+  <p class="label">03 / O VALOR PARA A MARCA</p>
 
   <h2>
-    Uma cliente real.<br>
-    Uma conquista real.<br>
-    <span>Uma conexão que já existe.</span>
+    Mais do que citar produtos.<br>
+    <span>Mostrar o papel deles na vida.</span>
   </h2>
 
   <div class="reasons">
@@ -1070,88 +1106,234 @@ dialog p { font-size: 14px; }
       <small>01</small>
       <h3>Verdade antes do roteiro.</h3>
       <p>
-        Sou cliente Nubank e o Nu já está na nossa vida.
-        O conteúdo nasce de uma experiência nossa.
+        Uma cliente e um casal que já utilizam o ecossistema da marca.
+        A história nasce de uma relação existente.
       </p>
     </article>
 
     <article>
       <small>02</small>
-      <h3>Emoção com contexto.</h3>
+      <h3>Uma jornada conectada.</h3>
       <p>
-        Organização financeira, vida a dois e intercâmbio conectados
-        por um sonho que muita gente compartilha.
+        Planejamento, compra de passagens, embarque e experiência
+        internacional unidos pela mesma conquista.
       </p>
     </article>
 
     <article>
       <small>03</small>
-      <h3>Olhar de criadora.</h3>
+      <h3>Conteúdo com intenção.</h3>
       <p>
-        Como criadora UGC e profissional de marketing, quero transformar
-        essa experiência em uma narrativa próxima e intencional.
+        O olhar de uma criadora UGC e profissional de marketing para
+        traduzir experiências reais em narrativas próximas.
       </p>
     </article>
   </div>
 </section>
 
-<section class="content partnership" id="parceria">
-  <div class="two-columns">
+<section class="content" id="proposta">
+  <p class="label">04 / OS CONCEITOS CRIATIVOS</p>
+
+  <div class="concept-heading">
+    <h2>
+      Quatro ideias.<br>
+      <span>Uma história inteira.</span>
+    </h2>
+
+    <p>
+      Conceitos de vídeos UGC adaptáveis ao briefing.
+      A quantidade final de produções é negociável.
+    </p>
+  </div>
+
+  <div class="tabs" role="tablist" aria-label="Conceitos de vídeo">
+    <button
+      id="tab-0"
+      role="tab"
+      aria-controls="panel"
+      aria-selected="true"
+      data-index="0">
+      01 <span>O sonho e o plano</span>
+    </button>
+
+    <button
+      id="tab-1"
+      role="tab"
+      aria-controls="panel"
+      aria-selected="false"
+      tabindex="-1"
+      data-index="1">
+      02 <span>A passagem</span>
+    </button>
+
+    <button
+      id="tab-2"
+      role="tab"
+      aria-controls="panel"
+      aria-selected="false"
+      tabindex="-1"
+      data-index="2">
+      03 <span>O embarque</span>
+    </button>
+
+    <button
+      id="tab-3"
+      role="tab"
+      aria-controls="panel"
+      aria-selected="false"
+      tabindex="-1"
+      data-index="3">
+      04 <span>Toronto</span>
+    </button>
+  </div>
+
+  <div
+    class="grid interactive-panel"
+    id="panel"
+    role="tabpanel"
+    aria-labelledby="tab-0"
+    tabindex="0">
+
+    <div class="art" id="art">
+      <div class="art-number">
+        <span>CONCEITO</span>
+        <b id="number">01</b>
+      </div>
+
+      <div class="art-title" id="art-title"></div>
+
+      <small>ANNA GOIVINHO × NUBANK</small>
+    </div>
+
+    <div class="detail">
+      <span class="tag" id="tag"></span>
+      <h3 id="title"></h3>
+      <p id="description"></p>
+      <blockquote id="hook"></blockquote>
+
+      <div class="format">
+        FORMATO-BASE SUGERIDO<br>
+        Vertical UGC · 30–60 segundos · Adaptável ao briefing
+      </div>
+    </div>
+  </div>
+
+  <div class="print-concepts" id="print-concepts"></div>
+
+  <p class="caption">
+    Quatro conceitos criativos não representam quatro vídeos
+    contratados. Escopo, quantidade, formatos e condições de uso
+    a negociar.
+  </p>
+</section>
+
+<section class="content commercial">
+  <p class="label">05 / A PARCERIA</p>
+
+  <div class="grid">
+    <div class="copy">
+      <h2>
+        Produção profissional.<br>
+        <span>Parceria sob medida.</span>
+      </h2>
+
+      <p class="intro">
+        Prioridade para remuneração pela produção e pelo
+        licenciamento dos conteúdos.
+      </p>
+
+      <p>
+        Parceria remunerada ou permuta negociada, respeitando
+        o escopo e o valor do trabalho criativo.
+      </p>
+    </div>
+
+    <div class="scope">
+      <div>
+        <h3>O que pode compor o escopo</h3>
+        <p>
+          Conceito e roteiro · Captação e edição<br>
+          Conteúdo vertical · Adaptações ao briefing
+        </p>
+      </div>
+
+      <div>
+        <h3>O que vamos definir juntos</h3>
+        <p>
+          Quantidade de produções, versões e revisões.<br>
+          Prazo, canais e território do licenciamento.<br>
+          Uso orgânico, mídia paga e eventual exclusividade.
+        </p>
+      </div>
+
+      <div>
+        <h3>Uma produção alinhada à realidade</h3>
+        <p>
+          Roteiros, cronograma e captação a combinar.
+          Acesso à sala VIP e autorizações de filmagem
+          sujeitos a confirmação.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content contact" id="contato">
+  <div class="grid">
     <div>
       <p class="label">06 / NOSSO PRÓXIMO CAPÍTULO</p>
 
       <h2>
-        Vamos contar<br>
-        essa história<br>
-        <span>juntos?</span>
+        Meu sonho<br>
+        já tem destino.<br>
+        <em>Vamos juntos?</em>
       </h2>
 
-      <p>
-        Meu sonho já tem destino.<br>
-        Quero que o Nu faça parte dessa história.
+      <p class="name">
+        Anna Goivinho<br>
+        <span>Criadora UGC e profissional de marketing.</span>
       </p>
-
-      <button class="button" type="button" id="open-summary">
-        Ver resumo da parceria <span>↗</span>
-      </button>
     </div>
 
-    <div class="offer">
-      <span class="offer-label">PROPOSTA INICIAL</span>
+    <address>
+      <a href="mailto:anna.goivinho@gmail.com">
+        <small>E-MAIL</small>
+        <strong>anna.goivinho@gmail.com</strong>
+      </a>
 
-      <h3>
-        3 vídeos UGC.<br>
-        Uma jornada completa.
-      </h3>
+      <a href="tel:+5519994512222">
+        <small>TELEFONE</small>
+        <strong>(19) 99451-2222</strong>
+      </a>
 
-      <ul>
-        <li>Conceito e roteiro</li>
-        <li>Captação e edição</li>
-        <li>Vídeos verticais de 30–60 segundos</li>
-        <li>Narrativa adaptável ao briefing</li>
-      </ul>
+      <a
+        href="https://www.instagram.com/lifebyannag/"
+        target="_blank"
+        rel="noopener noreferrer">
+        <small>INSTAGRAM</small>
+        <strong>@lifebyannag ↗</strong>
+      </a>
 
-      <p class="terms">
-        Parceria remunerada ou permuta negociada.<br>
-        Licenciamento, publicação e mídia paga a definir.
-      </p>
-
-      <div class="name">
-        Anna Júlia
-        <small>CRIADORA UGC</small>
-      </div>
-    </div>
+      <a
+        href="https://www.tiktok.com/@annagoivinho"
+        target="_blank"
+        rel="noopener noreferrer">
+        <small>TIKTOK</small>
+        <strong>@annagoivinho ↗</strong>
+      </a>
+    </address>
   </div>
 </section>
 
 </main>
 
 <footer>
-  <a class="logo" href="#inicio">anna<span>júlia.</span></a>
+  <a class="logo" href="#inicio">anna<span>goivinho.</span></a>
 
   <p>
-    Proposta criativa independente para o Nubank.<br>
-    Fotografias ilustrativas. Viagem prevista para dezembro de 2026.
+    Proposta independente para o Nubank, sem aprovação ou vínculo oficial.<br>
+    Viagem prevista para dezembro de 2026. Benefícios sujeitos às regras
+    e à elegibilidade aplicáveis.
   </p>
 
   <button type="button" id="print-button">
@@ -1159,152 +1341,200 @@ dialog p { font-size: 14px; }
   </button>
 </footer>
 
-<dialog id="summary" aria-labelledby="summary-title">
-  <button class="close" type="button" id="close-summary" aria-label="Fechar">
-    ×
-  </button>
-
-  <p class="label">ANNA JÚLIA × NUBANK</p>
-
-  <h2 id="summary-title">
-    Um sonho.<br>
-    Uma parceria possível.
-  </h2>
-
-  <p>
-    3 vídeos verticais UGC de 30–60 segundos sobre planejamento,
-    embarque e intercâmbio em Toronto, em dezembro de 2026.
-  </p>
-
-  <p>
-    <strong>Inclui:</strong> conceito, roteiro, captação e edição.
-    Valores, permuta, licenciamento, publicação e mídia paga
-    serão negociados com a marca.
-  </p>
-
-  <p class="pending">
-    Portfólio e contato de Anna Júlia precisam ser incluídos
-    antes do envio da proposta.
-  </p>
-</dialog>
-
 <script>
-const chapters = [
+const concepts = [
   {
-    number: "01",
-    art: "Tudo começa<br>com um plano.",
-    tag: "PLANEJAMENTO & CONEXÃO",
-    title: "O sonho já existia.<br>O plano veio depois.",
+    art: "O sonho<br>antes da mala.",
+    tag: "CAIXINHAS / PLANEJAMENTO",
+    title: "O sonho é antigo.<br>A organização faz parte do caminho.",
     description:
-      "Um vídeo sobre meu sonho de adolescente, nossa organização " +
-      "financeira como casal e a presença das Caixinhas na nossa rotina. " +
-      "O começo de uma conquista que vai além da viagem.",
-    hook:
-      "“Antes de conhecer Toronto, eu precisei aprender a chegar até lá.”",
-    background: "#f2eafa",
+      "A história da adolescência, a vida a dois e a organização " +
+      "financeira com as Caixinhas. Um relato sobre guardar dinheiro " +
+      "de maneira geral e planejar objetivos juntos, sem atribuir " +
+      "a viagem a uma Caixinha exclusiva.",
+    hook: "“Antes de arrumar a mala, a gente organizou a vida.”",
+    bg: "#f2eaf8",
     color: "#820ad1"
   },
   {
-    number: "02",
-    art: "O dia chegou.<br>O novo<br>me espera.",
-    tag: "PREPARATIVOS & EMBARQUE",
-    title: "O dia que eu imaginei.<br>Agora tem passagem.",
+    art: "Quando o sonho<br>ganhou data.",
+    tag: "NU VIAGENS / COMPRA REALIZADA",
+    title: "O sonho era antigo.<br>A passagem agora é real.",
     description:
-      "Os preparativos, as malas e a emoção de embarcar ao lado do meu " +
-      "marido. Um registro do uso real dos benefícios elegíveis do " +
-      "Ultravioleta, cartão que ele já possui, conforme as condições aplicáveis.",
-    hook: "“A mala leva roupas. Eu levo um sonho de anos.”",
-    background: "#210735",
-    color: "#dfb7fc"
+      "As passagens para o Canadá já foram compradas pelo Nu Viagens. " +
+      "O vídeo conecta a história do casal a esse momento concreto, " +
+      "com registros autênticos da compra e dos preparativos, " +
+      "preservando os dados pessoais.",
+    hook: "“Foi pelo Nu Viagens que esse sonho ganhou passagem.”",
+    bg: "#210735",
+    color: "#dfb9fb"
   },
   {
-    number: "03",
-    art: "O mundo ficou<br>um pouco<br>mais meu.",
-    tag: "TORONTO & NOVOS COMEÇOS",
-    title: "O sonho ganhou ruas,<br>vozes e novas histórias.",
+    art: "O sonho começa<br>em GRU.",
+    tag: "EMBARQUE / EXPERIÊNCIA PREVISTA",
+    title: "A viagem começa antes<br>de o avião sair do chão.",
     description:
-      "O intercâmbio de inglês, os primeiros encontros com a cultura " +
-      "local e o clima de Natal em Toronto. Uma narrativa pessoal sobre " +
-      "viver uma conquista que começou muito antes do embarque.",
+      "A expectativa do embarque em Guarulhos e a intenção de utilizar " +
+      "uma sala VIP pelos benefícios do Ultravioleta. Acesso, " +
+      "acompanhante e terminal a confirmar. Sem acesso elegível, " +
+      "a narrativa acompanha os rituais de embarque no aeroporto.",
+    hook: "“A mala está pronta. Agora, é a vez de viver o novo.”",
+    bg: "#e9ddf3",
+    color: "#480875"
+  },
+  {
+    art: "Finalmente,<br>Toronto.",
+    tag: "INTERCÂMBIO / ULTRAVIOLETA NO EXTERIOR",
+    title: "O mundo ficou<br>um pouco mais nosso.",
+    description:
+      "O intercâmbio de inglês, a cultura local e o período natalino " +
+      "no Canadá. José já possui o Ultravioleta, que pretendemos " +
+      "utilizar em compras e experiências internacionais, " +
+      "conforme os benefícios elegíveis.",
     hook: "“Eu via esse Natal nos filmes. Agora, vou viver o meu.”",
-    background: "#eef0b7",
+    bg: "#eef0b7",
     color: "#820ad1"
   }
 ];
 
-const tabs = Array.from(document.querySelectorAll("[data-index]"));
+const tabs = [...document.querySelectorAll("[data-index]")];
 
-function selectChapter(index) {
-  const chapter = chapters[index];
+function select(index) {
+  const c = concepts[index];
 
   tabs.forEach((tab, position) => {
-    const selected = position === index;
-    tab.setAttribute("aria-selected", String(selected));
-    tab.tabIndex = selected ? 0 : -1;
+    tab.setAttribute("aria-selected", String(position === index));
+    tab.tabIndex = position === index ? 0 : -1;
   });
 
-  document.getElementById("chapter-panel")
+  document.getElementById("panel")
     .setAttribute("aria-labelledby", "tab-" + index);
 
-  document.getElementById("chapter-number").textContent = chapter.number;
-  document.getElementById("art-title").innerHTML = chapter.art;
-  document.getElementById("chapter-tag").textContent = chapter.tag;
-  document.getElementById("chapter-title").innerHTML = chapter.title;
-  document.getElementById("chapter-description").textContent =
-    chapter.description;
-  document.getElementById("chapter-hook").textContent = chapter.hook;
+  document.getElementById("number").textContent =
+    String(index + 1).padStart(2, "0");
 
-  const art = document.getElementById("chapter-art");
-  art.style.backgroundColor = chapter.background;
-  art.style.color = chapter.color;
+  document.getElementById("art-title").innerHTML = c.art;
+  document.getElementById("title").innerHTML = c.title;
+  document.getElementById("tag").textContent = c.tag;
+  document.getElementById("description").textContent = c.description;
+  document.getElementById("hook").textContent = c.hook;
+  document.getElementById("art").style.background = c.bg;
+  document.getElementById("art").style.color = c.color;
 }
 
 tabs.forEach((tab, index) => {
-  tab.addEventListener("click", () => selectChapter(index));
+  tab.addEventListener("click", () => select(index));
 
   tab.addEventListener("keydown", event => {
     let next;
 
-    if (event.key === "ArrowRight") next = (index + 1) % tabs.length;
-    if (event.key === "ArrowLeft") {
-      next = (index + tabs.length - 1) % tabs.length;
-    }
+    if (event.key === "ArrowRight") next = (index + 1) % 4;
+    if (event.key === "ArrowLeft") next = (index + 3) % 4;
     if (event.key === "Home") next = 0;
-    if (event.key === "End") next = tabs.length - 1;
+    if (event.key === "End") next = 3;
 
     if (next !== undefined) {
       event.preventDefault();
-      selectChapter(next);
+      select(next);
       tabs[next].focus();
     }
   });
 });
 
-const summary = document.getElementById("summary");
+select(0);
 
-document.getElementById("open-summary").addEventListener("click", () => {
-  summary.showModal();
+document.getElementById("print-concepts").replaceChildren();
+
+concepts.forEach((c, index) => {
+  const article = document.createElement("article");
+
+  const tag = document.createElement("small");
+  tag.textContent =
+    String(index + 1).padStart(2, "0") + " / " + c.tag;
+
+  const title = document.createElement("h3");
+  title.innerHTML = c.title;
+
+  const description = document.createElement("p");
+  description.textContent = c.description;
+
+  const quote = document.createElement("blockquote");
+  quote.textContent = c.hook;
+
+  article.append(tag, title, description, quote);
+
+  document.getElementById("print-concepts").append(article);
 });
 
-document.getElementById("close-summary").addEventListener("click", () => {
-  summary.close();
+document.getElementById("print-button")
+  .addEventListener("click", () => window.print());
+
+const photo = document.getElementById("couple-photo");
+const input = document.getElementById("photo-input");
+const status = document.getElementById("photo-status");
+const save = document.getElementById("save-photo");
+
+input?.addEventListener("change", () => {
+  const file = input.files[0];
+
+  if (!file) return;
+
+  if (!["image/jpeg", "image/png", "image/webp"].includes(file.type)) {
+    status.textContent = "Escolha uma foto JPG, PNG ou WebP.";
+    return;
+  }
+
+  const reader = new FileReader();
+
+  reader.onload = () => {
+    photo.src = reader.result;
+    photo.hidden = false;
+
+    document.getElementById("photo-placeholder").hidden = true;
+
+    save.hidden = false;
+
+    status.textContent =
+      "Foto inserida sem alteração. Clique em “Salvar HTML com nossa " +
+      "foto” para mantê-la no arquivo.";
+  };
+
+  reader.onerror = () => {
+    status.textContent = "Não foi possível ler a foto. Tente novamente.";
+  };
+
+  reader.readAsDataURL(file);
 });
 
-summary.addEventListener("click", event => {
-  if (event.target !== summary) return;
+save?.addEventListener("click", () => {
+  if (!photo.src.startsWith("data:image/")) return;
 
-  const rect = summary.getBoundingClientRect();
-  const outside =
-    event.clientX < rect.left ||
-    event.clientX > rect.right ||
-    event.clientY < rect.top ||
-    event.clientY > rect.bottom;
+  const clone = document.documentElement.cloneNode(true);
 
-  if (outside) summary.close();
-});
+  clone.querySelector("#photo-status").textContent = "";
 
-document.getElementById("print-button").addEventListener("click", () => {
-  window.print();
+  clone.querySelectorAll(".photo-tools").forEach(element => {
+    element.remove();
+  });
+
+  clone.querySelector("#photo-placeholder").remove();
+
+  const blob = new Blob(
+    ["<!DOCTYPE html>\n" + clone.outerHTML],
+    { type: "text/html;charset=utf-8" }
+  );
+
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+
+  link.href = url;
+  link.download = "proposta-anna-goivinho-final.html";
+  link.click();
+
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+
+  status.textContent =
+    "Abra o novo HTML salvo para conferir. A foto está dentro dele.";
 });
 </script>
 
